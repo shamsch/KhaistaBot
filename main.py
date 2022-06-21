@@ -29,5 +29,5 @@ async def on_message(message):
         reply= "Skar ওরফে Shiblu!"
         await message.channel.send(reply)
 
-# keep_alive()
-# client.run(os.getenv('TOKEN'))
+keep_alive()
+client.run(os.getenv('TOKEN'))
