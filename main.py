@@ -2,30 +2,32 @@ import discord
 import os
 import requests
 from keep_alive import keep_alive
-import json 
 
 res = requests.get('https://richup.io/api/room/new?isPrivate=true')
+
 res= res.json()
 roomId = res['roomId']
+
+link = f"https://richup.io/room/{roomId}"
 
 client = discord.Client()
 
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
+    print(f'Logged in as {client.user}')
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-
+    #main command 
     if message.content == '/sendLink':
-        res = "link"
-        await message.channel.send(res)
+        await message.channel.send(link)
     
-      #skar khobis, khaista 
+    #this is just a fun command for a friend xD  
     if message.content == '/whoIsKhaista': 
-        res= "Skar ওরফে Shiblu!"
+        reply= "Skar ওরফে Shiblu!"
+        await message.channel.send(reply)
 
 # keep_alive()
 # client.run(os.getenv('TOKEN'))
