@@ -5,9 +5,11 @@ Add to your discord server from [here](https://discord.com/api/oauth2/authorize?
 
 ## Command: 
 
-`/sendLink` will generate the link 
+`/sendLink` will generate the link
+<br/>
 `/whoIsKhaista` to ping status
 
 Shamsur Raza
+<br/>
 22 June 2022
 
