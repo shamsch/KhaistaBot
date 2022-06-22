@@ -3,13 +3,6 @@ import os
 import requests
 from keep_alive import keep_alive
 
-res = requests.get('https://richup.io/api/room/new?isPrivate=true')
-
-res= res.json()
-roomId = res['roomId']
-
-link = f"https://richup.io/room/{roomId}"
-
 client = discord.Client()
 
 @client.event
@@ -22,7 +15,13 @@ async def on_message(message):
         return
     #main command 
     if message.content == '/sendLink':
-        await message.channel.send(link)
+      res = requests.get('https://richup.io/api/room/new?isPrivate=true')
+
+      res= res.json()
+      roomId = res['roomId']
+        
+      link = f"https://richup.io/room/{roomId}"
+      await message.channel.send(link)
     
     #this is just a fun command for a friend xD  
     if message.content == '/whoIsKhaista': 
