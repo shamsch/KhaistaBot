@@ -5,9 +5,9 @@ Add to your discord server from [here](https://discord.com/api/oauth2/authorize?
 
 ## Command: 
 
-`/sendLink` will generate the link
+`!richup` will generate the link
 <br/>
-`/whoIsKhaista` to ping status
+`!ping` to ping status
 
 Shamsur Raza
 <br/>
