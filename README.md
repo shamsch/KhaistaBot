@@ -8,6 +8,8 @@ Add to your discord server from [here](https://discord.com/api/oauth2/authorize?
 `!richup` will generate the link
 <br/>
 `!ping` to ping status
+<br/>
+`!words` will generate a list of words from one channel and dump it as a text file in another, intended for custom words generation for *skribble.io*  
 
 Shamsur Raza
 <br/>
